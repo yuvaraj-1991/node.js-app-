@@ -18,9 +18,14 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Run tests') {
+        stage('Run tests check Version') {
             steps{
                 sh 'npm -v'
+            }
+        }
+        stage('Build the application') {
+            steps{
+                sh 'npm run build'
             }
         }
     }
