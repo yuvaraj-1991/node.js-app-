@@ -1,0 +1,27 @@
+pipeline {
+    agent {
+        docker {
+            image node:latest // specifying the image for the pipeline to run on docker container
+            args '-u root' // here I am running it as root user
+        }
+    }
+
+    stages {
+        stage('Checkout code from Git Repo') {
+            steps {
+                // Git repository Check
+                echo 'Git Checkout Successful'
+            }                        
+        }
+        stage('Install dependies'){
+            steps {
+                sh 'npm install'
+            }
+        }
+        stage('Run tests') {
+            steps{
+                sh 'npm test'
+            }
+        }
+    }
+}
