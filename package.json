@@ -1,1 +1,11 @@
-{}
+{
+  "name": "Sample-Node-application",
+  "version": "1.0.0",
+  "description": "A simple Node.js application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Yuvaraj",
+  "license": "MIT"
+}
